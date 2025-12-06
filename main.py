@@ -2,9 +2,15 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-@app.route('/')
-def home():
-    return 'Home'
+
+#using a get method
+@app.route('/get-user/<user_id>')
+def get_user(user_id):
+    user_id = {
+        'user_id': user_id,         
+        'name': 'john patrick',
+        'email': 'johnpatrick@gmail.com'
+    }
 
 
 if __name__ == '__main__' :
