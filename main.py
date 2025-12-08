@@ -13,5 +13,11 @@ def get_user(user_id):
     }
 
 
+@app.get("/health")
+def health_check():
+    return {"status": "ok", "message": "API is running"}
+
+
+
 if __name__ == '__main__' :
     app.run(debug=True)  #run the flask server 
